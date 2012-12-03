@@ -1,8 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Standard Assets/Character Controllers/Sources/Scripts/2FPSInputController.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Standard Assets/Character Controllers/Sources/Scripts/1FPSInputController.js">
     <Files>
-      <File FileName="Assets/Standard Assets/Character Controllers/Sources/Scripts/1FPSInputController.js" Line="11" Column="2" />
+      <File FileName="Assets/Standard Assets/Character Controllers/Sources/Scripts/1FPSInputController.js" Line="11" Column="95" />
       <File FileName="Assets/Standard Assets/Character Controllers/Sources/Scripts/2FPSInputController.js" Line="11" Column="85" />
     </Files>
   </MonoDevelop.Ide.Workbench>
