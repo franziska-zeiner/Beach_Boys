@@ -1,9 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Standard Assets/Character Controllers/Sources/Scripts/P2Fire.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Standard Assets/Character Controllers/Sources/Scripts/Fire.js">
     <Files>
-      <File FileName="Assets/Standard Assets/Character Controllers/Sources/Scripts/P2Fire.js" Line="5" Column="31" />
-      <File FileName="Assets/Standard Assets/Character Controllers/Sources/Scripts/P1Fire.js" Line="7" Column="21" />
+      <File FileName="Assets/Standard Assets/Character Controllers/Sources/Scripts/Fire.js" Line="5" Column="31" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
