@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\HealthController.cs" />
+     <Compile Include="Assets\Scripts\MenuController.cs" />
      <Compile Include="Assets\Scripts\MouseLookP1.cs" />
      <Compile Include="Assets\Scripts\MouseLookP2.cs" />
      <Compile Include="Assets\Scripts\ProgressBar.cs" />
