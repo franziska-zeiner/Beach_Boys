@@ -47,7 +47,6 @@
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\1FPSInputController.js" />
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\2FPSInputController.js" />
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\CharacterMotor.js" />
-     <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\HealthBar.js" />
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\P1Fire.js" />
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\P2Fire.js" />
      <Compile Include="Assets\Standard Assets\Character Controllers\Sources\Scripts\PlatformInputController.js" />
