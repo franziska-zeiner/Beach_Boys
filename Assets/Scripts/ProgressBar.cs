@@ -17,6 +17,7 @@ public class ProgressBar : MonoBehaviour {
 		// If this is a right side health bar, flip the rect.
 		if (rightSide) {
 			rect.x = Screen.width - rect.x;
+			rect.y = Screen.height / 2 + 6;
 			rect.width = -rect.width;
 		}
 		
