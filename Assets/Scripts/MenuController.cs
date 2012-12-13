@@ -4,17 +4,11 @@ using System.Collections.Generic;
 
 public class MenuController : MonoBehaviour {
 	
-	static int difficulty = 1;
 	public GUISkin skin;
 	private List<Animation> animationComponents;
 	private List<AudioSource> audioSourceComponents;
 	private float menuOn = 0;
 	private float lastTime = 0;
-	
-	int[] playerHitDamage = new int[5] {  3,  4,  6, 10, 20 };
-	int[] playerHeal      = new int[5] {  5,  4,  3,  2,  0 };
-	int[] enemyHitDamage  = new int[5] { 10,  5,  2,  2,  2 };
-	int[] enemyHeal       = new int[5] {  0,  0,  0,  0,  0 };
 	
 	// Use this for initialization
 	IEnumerator Start () {
@@ -103,18 +97,6 @@ public class MenuController : MonoBehaviour {
 	}
 	
 	void UpdateDifficulty () {
-		Object[] objects = FindObjectsOfType(typeof(HealthController));
-		foreach (Object obj in objects) {
-			HealthController health = (HealthController)obj;
-			if (health.gameObject.tag == "Player") {
-				health.healingSpeed = playerHeal[difficulty];
-				health.hitDamage = playerHitDamage[difficulty];
-			}
-			else {
-				health.healingSpeed = enemyHeal[difficulty];
-				health.hitDamage = enemyHitDamage[difficulty];
-			}
-		}
 	}
 }
 

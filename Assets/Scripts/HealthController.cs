@@ -14,8 +14,7 @@ public class HealthController : MonoBehaviour {
 	
 	public GameObject deathHandler;
 	public float maxHealth = 100;
-	public float hitDamage = 1;
-	public float healingSpeed = 10;
+	public float healingSpeed;
 	public GameObject hitParticles;
 	public AudioClip hitSound;
 	[HideInInspector]
@@ -38,8 +37,8 @@ public class HealthController : MonoBehaviour {
 		health = Mathf.Clamp(health, 0, maxHealth);
 	}
 	
-	void OnHit () {
-		health -= hitDamage;
+	void OnHit (float damage) {
+		health -= damage;
 		health = Mathf.Clamp(health, 0, maxHealth);
 	}
 }
