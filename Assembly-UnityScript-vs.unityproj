@@ -48,6 +48,7 @@
      <Compile Include="Assets\Scripts\2FPSInputController.js" />
      <Compile Include="Assets\Scripts\BulletDespawn.js" />
      <Compile Include="Assets\Scripts\CharacterMotor.js" />
+     <Compile Include="Assets\Scripts\DebugGamepad.js" />
      <Compile Include="Assets\Scripts\P1Fire.js" />
      <Compile Include="Assets\Scripts\P2Fire.js" />
      <Compile Include="Assets\Scripts\PlatformInputController.js" />

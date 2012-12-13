@@ -49,7 +49,7 @@ public class MenuController : MonoBehaviour {
 		Rect rect = new Rect(0, 0, 150, 75);
 		rect.x = (Screen.width  - rect.width ) / 2 + (1 - menuOn) * Screen.width;
 		rect.y = (Screen.height - rect.height) / 2;
-		if (GUI.Button(rect, "PLAY")) {
+		if (GUI.Button(rect, "PLAY") || Input.GetButton("Start P1") || Input.GetButton("Start P2")) {
 			StartCoroutine(Pause(false));
 		}
 		
