@@ -14,8 +14,8 @@ public class HealthController : MonoBehaviour {
 	
 	public GameObject deathHandler;
 	public float maxHealth = 100;
-	public float hitDamage = 3;
-	public float healingSpeed = 2;
+	public float hitDamage = 1;
+	public float healingSpeed = 10;
 	public GameObject hitParticles;
 	public AudioClip hitSound;
 	[HideInInspector]
@@ -38,21 +38,9 @@ public class HealthController : MonoBehaviour {
 		health = Mathf.Clamp(health, 0, maxHealth);
 	}
 	
-	void OnHit (RayAndHit rayAndHit) {
+	void OnHit () {
 		health -= hitDamage;
 		health = Mathf.Clamp(health, 0, maxHealth);
-		
-		if (hitParticles) {
-			GameObject particles = Instantiate(
-				hitParticles,
-				rayAndHit.hit.point,
-				Quaternion.LookRotation(-rayAndHit.ray.direction)
-			) as GameObject;
-			particles.transform.parent = transform;
-		}
-		if (hitSound) {
-			AudioSource.PlayClipAtPoint(hitSound, rayAndHit.hit.point, 0.6f);
-		}
 	}
 }
 
