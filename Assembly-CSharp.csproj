@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\MouseLookP1.cs" />
      <Compile Include="Assets\Scripts\MouseLookP2.cs" />
      <Compile Include="Assets\Scripts\ProgressBar.cs" />
+     <None Include="Assets\CustomizableGun_FreeED\readme.txt" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
      <None Include="Assets\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
   </ItemGroup>
