@@ -9,7 +9,7 @@ private var lastPaceTime : float;
 
 function Start () {
   controller = GetComponent(CharacterController);
-  lastPaceTime = Time.fixedTime - paceDuration / 2;
+  lastPaceTime = Time.fixedTime - paceDuration * Random.value;
 }
 
 function Update () {
