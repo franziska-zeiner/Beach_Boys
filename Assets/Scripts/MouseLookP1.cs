@@ -46,7 +46,7 @@ public class MouseLookP1 : MonoBehaviour {
 		{
 			transform.Rotate(0, Input.GetAxis("Mouse X P1") * sensitivityX, 0);
 			playerSetDirection (5 * Input.GetAxis("Mouse X P1"));
-			networkView.RPC ("setDirection", RPCMode.Others, 5 * Input.GetAxis ("Mouse X P1"));
+			networkView.RPC ("playerSetDirection", RPCMode.Others, 5 * Input.GetAxis ("Mouse X P1"));
 		}
 		else
 		{
