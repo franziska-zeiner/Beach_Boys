@@ -9,7 +9,7 @@ private var lastPaceTime : float;
 
 function Start () {
   controller = GetComponent(CharacterController);
-  lastPaceTime = Time.fixedTime;
+  lastPaceTime = Time.fixedTime - paceDuration / 2;
 }
 
 function Update () {
