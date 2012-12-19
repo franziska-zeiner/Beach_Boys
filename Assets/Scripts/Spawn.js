@@ -1,13 +1,18 @@
 #pragma strict
 
 var playerPrefab : Transform;
+var playerTwo : boolean;
 
 function OnServerInitialized() {
-  Spawnplayer();
+  if (!playerTwo) {
+    Spawnplayer();
+  }
 }
 
 function OnConnectedToServer() {
-  Spawnplayer();
+  if (playerTwo) {
+    Spawnplayer();
+  }
 }
 
 function Spawnplayer() {
