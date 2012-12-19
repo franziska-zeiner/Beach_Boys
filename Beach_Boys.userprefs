@@ -2,9 +2,9 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/NPC.js">
     <Files>
-      <File FileName="Assets/Scripts/MouseLookP1.cs" Line="28" Column="31" />
+      <File FileName="Assets/Scripts/MouseLookP1.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/NPC.js" Line="12" Column="62" />
-      <File FileName="Assets/Scripts/CharacterMotor.js" Line="401" Column="30" />
+      <File FileName="Assets/Scripts/CharacterMotor.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
