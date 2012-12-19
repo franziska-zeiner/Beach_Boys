@@ -19,6 +19,7 @@ function Start () {
   networkView.RPC("npcPlaySound", RPCMode.Others, clipIndex, clipTime);
 }
 
+@RPC
 function npcPlaySound(index : int, time : float) {
   audioSource.clip = audioClips[index];
   audioSource.time = time * audioSource.clip.length;
