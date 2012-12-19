@@ -398,7 +398,7 @@ private function ApplyGravityAndJumping (velocity : Vector3) {
 	
 	if (grounded)
 		velocity.y = Mathf.Min(0, velocity.y) - movement.gravity * Time.deltaTime;
-	else {
+	else if (networkView.isMine) {
 		velocity.y = movement.velocity.y - movement.gravity * Time.deltaTime;
 		
 		// When jumping up we don't apply gravity for some time when the user is holding the jump button.
