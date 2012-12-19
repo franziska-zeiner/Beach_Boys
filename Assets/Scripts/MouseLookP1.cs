@@ -27,6 +27,7 @@ public class MouseLookP1 : MonoBehaviour {
 
 	public float minimumY = -60F;
 	public float maximumY = 60F;
+	public Animator animator;
 
 	float rotationY = 0F;
 
@@ -44,6 +45,8 @@ public class MouseLookP1 : MonoBehaviour {
 		if (networkView && networkView.isMine && axes == RotationAxes.MouseX)
 		{
 			transform.Rotate(0, Input.GetAxis("Mouse X P1") * sensitivityX, 0);
+			animator.SetFloat("Direction", 5 * Input.GetAxis("Mouse X P1"), 0.25f, Time.deltaTime);
+			networkView.RPC ("setDirection", RPCMode.Others, 5 * Input.GetAxis ("Mouse X P1"));
 		}
 		else
 		{
@@ -52,6 +55,11 @@ public class MouseLookP1 : MonoBehaviour {
 			
 			transform.localEulerAngles = new Vector3(-rotationY, transform.localEulerAngles.y, 0);
 		}
+	}
+	
+	[RPC]
+	void setDirection(float direction) {
+		animator.SetFloat("Direction", direction, 0.25f, Time.deltaTime);
 	}
 	
 	void Start ()

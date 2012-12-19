@@ -1,3 +1,5 @@
+public var animator : Animator;
+public var model : GameObject;
 private var motor : CharacterMotor;
 
 // Use this for initialization
@@ -6,6 +8,8 @@ function Awake () {
 	if (!networkView.isMine) {
 	  GetComponentInChildren(Camera).enabled = false;
 	  GetComponentInChildren(AudioListener).enabled = false;
+	} else {
+	  model.layer = 9;
 	}
 }
 
@@ -35,7 +39,15 @@ function Update () {
 		// Apply the direction to the CharacterMotor
 		motor.inputMoveDirection = transform.rotation * directionVector;
 		motor.inputJump = Input.GetButton("Jump P1");
+	
+	    animator.SetFloat("Speed", Input.GetAxis("Vertical P1"));
+	    networkView.RPC("setSpeed", RPCMode.Others, Input.GetAxis("Vertical P1"));
 	}
+}
+
+@RPC
+function setSpeed(speed : float) {
+  animator.SetFloat("Speed", speed);
 }
 
 // Require a character controller to be attached to the same game object

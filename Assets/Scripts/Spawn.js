@@ -16,5 +16,5 @@ function OnConnectedToServer() {
 }
 
 function Spawnplayer() {
-  var myNewPlayer : Transform = Network.Instantiate(playerPrefab, transform.position, transform.rotation, 0);
+  Network.Instantiate(playerPrefab, transform.position, transform.rotation, 0);
 }
