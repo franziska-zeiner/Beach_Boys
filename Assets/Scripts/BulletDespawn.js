@@ -19,6 +19,12 @@ function Start () {
   spawnTime = Time.fixedTime;
 }
 
+function Awake() {
+  if (!networkView.isMine) {
+    gameObject.rigidbody.useGravity = false;
+  }
+}
+
 function Update () {
   if (Time.fixedTime - spawnTime > bulletLifetime) {
     Destroy(gameObject);

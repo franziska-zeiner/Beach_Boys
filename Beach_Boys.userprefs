@@ -1,8 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/P2Fire.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/BulletDespawn.js">
     <Files>
-      <File FileName="Assets/Scripts/P2Fire.js" Line="16" Column="39" />
+      <File FileName="Assets/Scripts/NetworkRigidbody.cs" Line="122" Column="6" />
+      <File FileName="Assets/Scripts/P1Fire.js" Line="10" Column="2" />
+      <File FileName="Assets/Scripts/Shoot.js" Line="9" Column="2" />
+      <File FileName="Assets/Scripts/BulletDespawn.js" Line="24" Column="5" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

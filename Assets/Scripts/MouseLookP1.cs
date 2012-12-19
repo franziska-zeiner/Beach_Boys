@@ -32,16 +32,16 @@ public class MouseLookP1 : MonoBehaviour {
 
 	void Update ()
 	{
-		if (axes == RotationAxes.MouseXAndY)
-		{
-			float rotationX = transform.localEulerAngles.y + Input.GetAxis("Mouse X P1") * sensitivityX;
-			
-			rotationY += Input.GetAxis("Mouse Y P1") * sensitivityY;
-			rotationY = Mathf.Clamp (rotationY, minimumY, maximumY);
-			
-			transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
-		}
-		else if (axes == RotationAxes.MouseX)
+//		if (axes == RotationAxes.MouseXAndY)
+//		{
+//			float rotationX = transform.localEulerAngles.y + Input.GetAxis("Mouse X P1") * sensitivityX;
+//			
+//			rotationY += Input.GetAxis("Mouse Y P1") * sensitivityY;
+//			rotationY = Mathf.Clamp (rotationY, minimumY, maximumY);
+//			
+//			transform.localEulerAngles = new Vector3(-rotationY, rotationX, 0);
+//		}
+		if (networkView && networkView.isMine && axes == RotationAxes.MouseX)
 		{
 			transform.Rotate(0, Input.GetAxis("Mouse X P1") * sensitivityX, 0);
 		}
