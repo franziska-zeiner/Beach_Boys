@@ -13,8 +13,16 @@ function Start () {
   audioSource = GetComponent(AudioSource);
   controller = GetComponent(CharacterController);
   lastPaceTime = Time.fixedTime - paceDuration * Random.value;
-  audioSource.clip = audioClips[Random.Range(0, 23)];
-  audioSource.time = Random.Range(0, audioSource.clip.length);
+  var clipIndex : int = Random.Range(0, 23);
+  var clipTime : float = Random.Range(0, audioSource.clip.length);
+  npcPlaySound(clipIndex, clipTime);
+  networkView.RPC("npcPlaySound", RPCMode.Others, clipIndex, clipTime);
+}
+
+@RPC
+function npcPlaySound(index : int, time : float) {
+  audioSource.clip = audioClips[index];
+  audioSource.time = time;
   audioSource.Play();
 }
 
