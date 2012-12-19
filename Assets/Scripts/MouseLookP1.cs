@@ -45,7 +45,7 @@ public class MouseLookP1 : MonoBehaviour {
 		if (networkView && networkView.isMine && axes == RotationAxes.MouseX)
 		{
 			transform.Rotate(0, Input.GetAxis("Mouse X P1") * sensitivityX, 0);
-			animator.SetFloat("Direction", 5 * Input.GetAxis("Mouse X P1"), 0.25f, Time.deltaTime);
+			playerSetDirection (5 * Input.GetAxis("Mouse X P1"));
 			networkView.RPC ("setDirection", RPCMode.Others, 5 * Input.GetAxis ("Mouse X P1"));
 		}
 		else
@@ -58,7 +58,7 @@ public class MouseLookP1 : MonoBehaviour {
 	}
 	
 	[RPC]
-	void setDirection(float direction) {
+	void playerSetDirection(float direction) {
 		animator.SetFloat("Direction", direction, 0.25f, Time.deltaTime);
 	}
 	

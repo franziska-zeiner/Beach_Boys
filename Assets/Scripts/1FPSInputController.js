@@ -40,13 +40,13 @@ function Update () {
 		motor.inputMoveDirection = transform.rotation * directionVector;
 		motor.inputJump = Input.GetButton("Jump P1");
 	
-	    animator.SetFloat("Speed", Input.GetAxis("Vertical P1"));
-	    networkView.RPC("setSpeed", RPCMode.Others, Input.GetAxis("Vertical P1"));
+	    playerSetSpeed(Input.GetAxis("Vertical P1"));
+	    networkView.RPC("playerSetSpeed", RPCMode.Others, Input.GetAxis("Vertical P1"));
 	}
 }
 
 @RPC
-function setSpeed(speed : float) {
+function playerSetSpeed(speed : float) {
   animator.SetFloat("Speed", speed);
 }
 
