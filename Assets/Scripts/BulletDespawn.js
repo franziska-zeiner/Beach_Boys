@@ -16,6 +16,7 @@ function OnCollisionEnter(collision : Collision) {
   } else if (collision.gameObject.tag == "NPC") {
     Network.Destroy(collision.gameObject);
   }
+  Network.Destroy(gameObject);
 }
 
 function Start () {
