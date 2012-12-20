@@ -17,11 +17,5 @@ function Update () {
 	    shot.GetComponent(Rigidbody).velocity = projectileVelocity * shootPoint.forward;
 	    previousShotTime = Time.fixedTime;
 	  }
-  } else {
-      if((Time.fixedTime - previousShotTime > shotDelay) && Input.GetButton("Fire P1")) {
-        Debug.Log("Firing as client.");
-	    networkView.RPC("Fire", RPCMode.All, shootPoint.position, shootPoint.rotation, projectileVelocity * shootPoint.forward);
-	    previousShotTime = Time.fixedTime;
-	  }
   }
 }
