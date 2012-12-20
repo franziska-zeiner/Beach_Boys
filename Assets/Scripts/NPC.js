@@ -2,10 +2,12 @@
 
 var animator : Animator;
 var audioClips : AudioClip[];
+var mesh : SkinnedMeshRenderer;
 var minSpeakDelay : float;
 var maxSpeakDelay : float;
 var paceDuration : float;
 var speed : float;
+var textures : Texture[];
 
 private var audioSource : AudioSource;
 private var controller: CharacterController;
@@ -18,6 +20,7 @@ function Start () {
   controller = GetComponent(CharacterController);
   lastPaceTime = Time.fixedTime - paceDuration * Random.value;
   lastSpeakTime = Time.fixedTime;
+  mesh.materials[1].mainTexture = textures[Random.Range(0, textures.Length)];
   speakDelay = Random.Range(minSpeakDelay, maxSpeakDelay);
 }
 
@@ -34,7 +37,7 @@ function Update () {
       lastPaceTime = Time.fixedTime;
     }
     if (!audioSource.isPlaying && Time.fixedTime - lastSpeakTime > speakDelay) {
-	  var clipIndex : int = Random.Range(0, 23);
+	  var clipIndex : int = Random.Range(0, audioClips.Length);
 	  var clipTime : float = Random.value;
 	  npcPlaySound(clipIndex, clipTime);
 	  lastSpeakTime = Time.fixedTime;
