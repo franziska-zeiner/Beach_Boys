@@ -8,6 +8,7 @@ var maxSpeakDelay : float;
 var paceDuration : float;
 var speed : float;
 var textures : Texture[];
+var hairs : GameObject[];
 
 private var audioSource : AudioSource;
 private var controller: CharacterController;
@@ -22,6 +23,10 @@ function Start () {
   lastSpeakTime = Time.fixedTime;
   mesh.materials[1].mainTexture = textures[Random.Range(0, textures.Length)];
   speakDelay = Random.Range(minSpeakDelay, maxSpeakDelay);
+  var hairIndex : int = Random.Range(0, 4) - 1;
+  if (hairIndex > -1) {
+    hairs[hairIndex].active = true;
+  }
 }
 
 function npcPlaySound(index : int, time : float) {
