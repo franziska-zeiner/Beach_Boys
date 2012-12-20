@@ -18,6 +18,10 @@ function EnableGun() {
   gun.active = true;
 }
 
+function IsGunEnabled() {
+  return gun.active;
+}
+
 // Update is called once per frame
 function Update () {
     if (networkView.isMine) {
