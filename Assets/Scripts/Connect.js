@@ -10,6 +10,7 @@
 
 var connectToIP : String = "127.0.0.1";
 var connectPort : int = 25001;
+var instructionTexture : Texture;
 
 
 //Obviously the GUI is for both client&servers (mixed!)
@@ -40,6 +41,10 @@ function OnGUI ()
 			Network.InitializeServer(32, connectPort);
 		}
 		GUILayout.EndVertical();
+		
+		
+		
+    GUI.DrawTexture(new Rect(Screen.width / 2 - 400, Screen.height / 2 - 300, 800, 600), instructionTexture);
 		
 		
 	}else{

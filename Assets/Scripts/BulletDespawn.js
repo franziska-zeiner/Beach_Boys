@@ -4,6 +4,11 @@ var bulletLifetime : float;
 var bulletDamage : float;
 
 private var spawnTime : float;
+private var player : GameObject;
+
+function SetPlayer(newPlayer : GameObject) {
+  player = newPlayer;
+}
 
 function OnCollisionEnter(collision : Collision) {
   Debug.Log(collision.gameObject.tag);
@@ -14,6 +19,10 @@ function OnCollisionEnter(collision : Collision) {
     hit.point = collision.contacts[0].point;
     collision.gameObject.SendMessage("OnHit", bulletDamage, SendMessageOptions.DontRequireReceiver);
   } else if (collision.gameObject.tag == "NPC") {
+    player.SendMessage("KilledNpc");
+    Network.Destroy(collision.gameObject);
+  } else if (collision.gameObject.tag == "Target") {
+    player.SendMessage("KilledTarget");
     Network.Destroy(collision.gameObject);
   }
   Network.Destroy(gameObject);

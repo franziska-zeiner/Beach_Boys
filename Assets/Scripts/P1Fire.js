@@ -18,6 +18,7 @@ function Update () {
 	    Debug.Log("Firing as server.");
 	    var shot : GameObject = Network.Instantiate(fireBall, shootPoint.position, shootPoint.rotation, 0);
 	    shot.GetComponent(Rigidbody).velocity = projectileVelocity * shootPoint.forward;
+	    shot.SendMessage("SetPlayer", gameObject);
 	    justShot = true;
 	    previousShotTime = Time.fixedTime;
 	  }
