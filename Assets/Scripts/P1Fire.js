@@ -1,4 +1,5 @@
 var fireBall : GameObject;
+var gun : GameObject;
 var shootPoint : Transform;
 var projectileVelocity : float;
 var shotDelay : float;
@@ -13,7 +14,7 @@ function Start() {
 
 function Update () {
   if (networkView.isMine) {
-	  if(!justShot && (Time.fixedTime - previousShotTime > shotDelay) && Input.GetButton("Fire P1")) {
+	  if(!justShot && gun.active && (Time.fixedTime - previousShotTime > shotDelay) && Input.GetButton("Fire P1")) {
 	    Debug.Log("Firing as server.");
 	    var shot : GameObject = Network.Instantiate(fireBall, shootPoint.position, shootPoint.rotation, 0);
 	    shot.GetComponent(Rigidbody).velocity = projectileVelocity * shootPoint.forward;

@@ -1,4 +1,5 @@
 public var animator : Animator;
+public var gun : GameObject;
 public var model : GameObject;
 private var motor : CharacterMotor;
 
@@ -11,6 +12,10 @@ function Awake () {
 	} else {
 	  model.layer = 9;
 	}
+}
+
+function EnableGun() {
+  gun.active = true;
 }
 
 // Update is called once per frame
